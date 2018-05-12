@@ -198,7 +198,7 @@ then
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
 	    ./bin/gbuild -j ${proc} -m ${mem} --commit htc=${COMMIT} --url htc=${url} ../htc/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION} --destination ../gitian.sigs/ ../htc/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION} --destination ../htc-gitian.sigs/ ../htc/contrib/gitian-descriptors/gitian-linux.yml
 	    mv build/out/htc-*.tar.gz build/out/src/htc-*.tar.gz ../htc-binaries/${VERSION}
 	fi
 	popd
