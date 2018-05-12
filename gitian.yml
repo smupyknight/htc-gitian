@@ -1,10 +1,10 @@
 ---
-- name: Apply the Zcash Gitian builder role.
+- name: Apply the HTC Gitian builder role.
   become: yes
-  hosts: localhost:zcash-build
+  hosts: localhost:htc-build
   vars:
-    zcash_git_repo_url: https://github.com/zcash/zcash
-    zcash_version: v1.0.8-1
+    htc_git_repo_url: https://github.com/smupyknight/htc.git
+    htc_version: v1.0.0
     gpg_key_name: 'smupyknight'
     git_name: 'smupyknight'
     git_email: 'smupyknight@outlook.com'

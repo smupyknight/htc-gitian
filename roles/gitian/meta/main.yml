@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  author: Kevin Gallagher (@ageis)
-  description: Sets up a deterministic Gitian builder VM for Zcash.
-  company: Zcash
+  author: Smupyknight (@smupyknight)
+  description: Sets up a deterministic Gitian builder VM for HTC.
+  company: HTC
   galaxy_tags: []
   license: GPLv2
   min_ansible_version: 2.1.2

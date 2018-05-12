@@ -7,14 +7,14 @@
     owner: "{{ gitian_user }}"
     group: "{{ gitian_user }}"
     mode: "0644"
-  with_items: "{{ zcash_developer_pubkeys }}"
+  with_items: "{{ htc_developer_pubkeys }}"
 
-- name: Import Zcash developer public keys.
+- name: Import HTC developer public keys.
   command: "gpg --import /tmp/{{ item.id }}.asc"
   become_user: "{{ gitian_user }}"
-  with_items: "{{ zcash_developer_pubkeys }}"
+  with_items: "{{ htc_developer_pubkeys }}"
 
-- name: Set Zcash developer public keys to ultimately trusted.
+- name: Set HTC developer public keys to ultimately trusted.
   shell: >
     gpg --list-keys --with-colons --with-fingerprint `gpg --list-keys
     --with-colons | grep "pub:f:.*:-:" |
