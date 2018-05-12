@@ -4,7 +4,7 @@
   hosts: localhost:htc-build
   vars:
     htc_git_repo_url: https://github.com/smupyknight/htc.git
-    htc_version: v1.0.0
+    htc_version: master
     gpg_key_name: 'smupyknight'
     git_name: 'smupyknight'
     git_email: 'smupyknight@outlook.com'
