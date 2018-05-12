@@ -205,11 +205,11 @@ then
 
         if [[ $commitFiles = true ]]
         then
-	    # Commit to gitian.sigs repo
+	    # Commit to htc-gitian.sigs repo
             echo ""
             echo "Committing ${VERSION} Signatures"
             echo ""
-            pushd gitian.sigs
+            pushd htc-gitian.sigs
             git add ${VERSION}/${SIGNER}
             git commit -a -m "Add ${VERSION} signatures for ${SIGNER}"
             popd
@@ -224,7 +224,7 @@ then
 	echo ""
 	echo "Verifying ${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION} ../htc/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../htc-gitian.sigs/ -r ${VERSION} ../htc/contrib/gitian-descriptors/gitian-linux.yml
 	popd
 fi
 
@@ -238,7 +238,7 @@ then
         if [[ $commitFiles = true ]]
         then
             # Commit Sigs
-            pushd gitian.sigs
+            pushd htc-gitian.sigs
             echo ""
             echo "Committing ${VERSION} Signed Binary Signatures"
             echo ""
